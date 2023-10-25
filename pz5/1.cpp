@@ -12,7 +12,7 @@ int main() {
 
         double y;
 
-        // Calculating the function y
+        
         if (x == 0) {
             cout << "Division by zero is not possible. Please enter a different value for x." << endl;
         } else {
