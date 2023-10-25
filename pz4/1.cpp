@@ -10,8 +10,8 @@ int main() {
     cout << "Enter value: ";
     cin >> value;
     
-    answer = (value >= 0 && value < 10) 
-             (value * 2 < 20 && value - 2 > -2) 
+    answer = (value >= 0 && value < 10) ||
+             (value * 2 < 20 && value - 2 > -2) ||
              (value - 1 > 1 && value / 2 < 10) ||
              (value == 111);
 
