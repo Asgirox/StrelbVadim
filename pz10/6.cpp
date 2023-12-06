@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-int sixth() {
+int main() {
 	int const m = 4;
 	int const n = 7;
 	int numbers[m][n];
