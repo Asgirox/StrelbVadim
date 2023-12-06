@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-int fiveth() {
+int main() {
 	int const m = 4;
 	int const n = 3;
 	int numbers[m][n];
