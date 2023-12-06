@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     
     const int size = 7;
-    int arr[size] = {5, 2, 0, 1, 9, 3, 6};
+    int arr[size] = {5, 2, 0, 1, 8, 4, 6};
     bool key = false;
     
     cout << "Початковий масив: ";
