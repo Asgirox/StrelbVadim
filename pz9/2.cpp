@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Ukrainian");
     
     const int size = 8;
     int arr[size];
