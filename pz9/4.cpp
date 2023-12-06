@@ -1,23 +1,33 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
-int sixth(int numbers[], int size) {
-	cout << "Sixth task: " << endl;
-	bool key = true;
-	for (int i = 0; i < size; i++) {
-		cout << numbers[i] << ' ';
-	}
-	for (int i = 0; i < size; i++) {
-		if (numbers[i] == 0) {
-			cout <<"The first index where the element equals zero: "<< i<<endl;
-			return 0;
-			key = false;
-		}
-	}
-	if (key) {
-		cout << "There are no zero!";
-	}
-	
-	return 0;
+int main() {
+    
+    const int size = 7;
+    int arr[size] = {5, 2, 0, 1, 9, 3, 6};
+    bool key = false;
+    
+    cout << "Початковий масив: ";
+    for(int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int zeroIndex = 0;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == 0) {
+            zeroIndex = i;
+            key = true;
+            break;
+        }
+    }
+
+    if (key) {
+        cout << "Перший нульовий елемент знаходиться в індексі: " << zeroIndex << endl;
+    } else {
+        cout << "Масив не містить нульових елементів." << endl;
+    }
+
+    return 0;
 }
