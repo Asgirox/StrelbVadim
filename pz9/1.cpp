@@ -1,33 +1,46 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
-int third(int numbers[], int size) {
-	cout << "Third task: " << endl;
+int main() {
+   
+    
+    const int size = 5;
+    int arr[size];
+    srand(time(0));
 
-	int max = numbers[0];
-	int min = numbers[0];
-	int index_max = 0;
-	int index_min = 0;
-	for (int i = 0; i < size; i++) {
-		if (max < numbers[i]) {
-			max = numbers[i];
-			index_max = i;
-		}
-		if (min > numbers[i]) {
-			min = numbers[i];
-			index_min = i;
-		}
-	}
-	int temp = numbers[index_max];
-	numbers[index_max] = numbers[index_min];
-	numbers[index_min] = temp;
-	
-	for (int i = 0; i < size; i++) {
-		cout << numbers[i] << " ";
-	}
-	cout << endl << endl;
+    for(int i = 0; i < size; i++) {
+         arr[i] = rand() % 100 + 1; 
+    }
 
-	return 0;
+    cout << "Початковий масив: ";
+    for(int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
+    int min_index = 0;
+    int max_index = 0;
+
+    for(int i = 0; i < size; i++) {
+        if(arr[i] < arr[min_index]) {
+            min_index = i;
+        }
+        if(arr[i] > arr[max_index]) {
+            max_index = i;
+        }
+    }
+
+    int var = arr[min_index];
+    arr[min_index] = arr[max_index];
+    arr[max_index] = var;
+
+    cout << "Змінений масив: ";
+    for(int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
 }
