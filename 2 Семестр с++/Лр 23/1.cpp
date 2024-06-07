@@ -23,7 +23,7 @@ int main(void)
     }
     catch(const int e)
     {      
-      cout << "Are you kidding me?" << endl;
+      cout << "Nope" << endl;
     }    
   }
   return 0;
